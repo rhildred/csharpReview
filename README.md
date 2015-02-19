@@ -1,2 +1,2 @@
 # csharpReview
-some sinmple review questions from Feb 19, 2015
+some simple review questions from Feb 19, 2015
