@@ -1,0 +1,8 @@
+﻿@using System.Dynamic;
+@{
+    dynamic oPerson = new ExpandoObject();
+    oPerson.name = "Rich";
+    oPerson.email = "rhildred@conestogac.on.ca";
+    Response.Write(Json.Encode(oPerson));
+}
+
