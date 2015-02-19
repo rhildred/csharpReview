@@ -1,0 +1,11 @@
+﻿@using System.Globalization;
+@{
+ Dictionary<string, string> months = new Dictionary<string, string>();
+
+ // Populate the months dictionary with the month number and name
+ for (int i = 1; i <= 12; i++)
+ {
+     months.Add(i.ToString(), DateTimeFormatInfo.CurrentInfo.GetMonthName(i));
+ }
+ Response.Write(Json.Encode(months));
+}

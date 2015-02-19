@@ -1,0 +1,29 @@
+﻿@{
+    
+    var aPeople = new [] {"person 1", "person 2", "person 3"};
+    
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        @{
+            /*
+
+            //for loop way
+            for (int n = 0; n < aPeople.Length; n++){
+                <p>@aPeople[n]</p>
+            }*/
+
+            //foreach way of doing the same thing
+            foreach(var person in aPeople){
+                <p>@person</p>
+            }
+        }
+    </body>
+</html>

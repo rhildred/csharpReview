@@ -1,0 +1,31 @@
+﻿@using System.Globalization;
+@{
+ Dictionary<int, string> months = new Dictionary<int, string>();
+
+ // Populate the months dictionary with the month number and name
+ for (int i = 1; i <= 12; i++)
+ {
+ months.Add(i, DateTimeFormatInfo.CurrentInfo.GetMonthName(i));
+ }
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8" />
+ <title></title>
+</head>
+<body>
+ <form action="months.cshtml" method="post">
+ Month:
+ <select name="month">
+ @foreach (var month in months)
+ {
+ <option value="@month.Key">@month.Value</option>
+ }
+ </select>
+     <p>
+        <input type="submit" value="Submit" />
+     </p>
+ </form>
+</body>
+</html>

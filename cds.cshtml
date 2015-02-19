@@ -1,0 +1,6 @@
+﻿@{
+    var aData = Database.Open("review").Query("SELECT * FROM cds");
+
+    Response.Write(Json.Encode(aData));
+    
+}
